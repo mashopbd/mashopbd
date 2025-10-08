@@ -1,62 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MA ShopBD - Quality You Can Trust</title>
-  <meta name="description" content="MA ShopBD - Quality You Can Trust. Coming soon with the best products at great value.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://mashopbd.com/">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #e6f0ff);
-      text-align: center;
-      padding: 80px 20px;
-      color: #333;
-    }
-    .logo {
-      font-size: 48px;
-      font-weight: bold;
-      color: #1a73e8;
-    }
-    .tagline {
-      font-size: 20px;
-      margin-top: 10px;
-      color: #555;
-    }
-    .section {
-	    margin-top: 40px;
-	    max-width: 600px;
-	    margin-left: auto;
-	    margin-right: auto;
-    }
-    .contact {
-	    margin-top: 30px;
-	    fon-size: 16px;
-    }
-    .footer {
-	    margin-top: 60px;
-	    font-size: 14px;
-	    color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA ShopBD - Coming Soon</title>
+    <meta name="description" content="MA ShopBD - A ShopBD - Quality You Can Trust. Coming soon with the best products at great value.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-3px);
+        }
+
+        .email-signup {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .email-signup h3 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .email-input:focus {
+            border-color: #667eea;
+        }
+
+        .notify-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .notify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .notify-btn:active {
+            transform: translateY(0);
+        }
+
+        .social-links {
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #667eea;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .category {
+                font-size: 0.85rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="logo">MA ShopBD</div>
-  <div class="tagline">Quality You Can Trust</div>
+    <div class="container">
+        <div class="logo">MA ShopBD</div>
+        <div class="tagline">Quality You Can Trust</div>
+        
+        <h1>Coming Soon! 🚀</h1>
+        
+        <p class="description">
+            We're working hard to bring you quality products at fair prices. Stay tuned!
+        </p>
 
-  <div class="section">
-	  <h2><p>🚧 Coming Soon 🚧</p></h2>
-	  <p>We're working hard to bring you our best kitchenwire, daily essentials at fair prices. Stay tuned!<p>
-  <div class="section contact">
-	  <p>📧 Contact us: <a href="mailto:contact.mashopbd@gmail.com">contact.mashopbd@gmail.com></a></p>
-	  <!--
-	  <p>🌐 Follow us on <a href="https://facebook.com/MAShopBD" target="_blank">Facebook</a></p>
-	  -->
-  </div>
+        <div class="categories">
+            <div class="category">🍳 Kitchenware</div>
+            <div class="category">📚 Educational Tools</div>
+            <div class="category">🏠 Daily Essentials</div>
+        </div>
 
-  <footer>
-	  MA ShopBD
+        <p class="description" style="font-size: 0.95rem; color: #777;">
+            Based in Bangladesh
+        </p>
+
+		<div class="email-signup">
+            <h3>Contact Us</h3>
+            <p style="font-size: 1.1rem; color: #667eea; font-weight: 600; margin-top: 10px;">
+                <a href="mailto:contact.mashopbd@gmail.com" style="color: #667eea; text-decoration: none;">
+                    ✉️ contact.mashopbd@gmail.com
+                </a>
+            </p>
+        </div>
+
+       <div class="social-links">
+          <!--  <a href="#" title="Facebook" aria-label="Facebook">📘</a> -->
+            <a href="mailto:contact.mashopbd@gmail.com" title="Email" aria-label="Email">✉️</a>
+        </div>
+    </div>
 </body>
 </html>
